@@ -12,7 +12,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace T2010A_UWP.Quest1
@@ -20,11 +19,26 @@ namespace T2010A_UWP.Quest1
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Emloyee : Page
+    public sealed partial class Employee : Page
     {
-        public Emloyee()
+        public Employee()
         {
             this.InitializeComponent();
+        }
+        private List<Employeess> employees;
+
+        public class Employeess
+        {
+            public Employeess(string Name, ushort Role, ushort Birthyear)
+            {
+                Name = name;
+                Role = role;
+                Birthyear = birthyear;
+            }
+
+            public string Name { get; set; }
+            public string Role { get; set; }
+            public int Birthyear { get; set; }
         }
     }
 }
